@@ -2,7 +2,7 @@ import * as React from 'react';
 import { ThemeShape, IconSource } from '../types';
 
 export interface IconProps {
-  icon: IconSource;
+  source: IconSource;
   size?: number;
   color?: string;
   style?: any;

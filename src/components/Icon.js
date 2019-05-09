@@ -61,6 +61,7 @@ export type IconSource =
 type IconProps = {
   color: string,
   size: number,
+  style?: any,
 };
 
 type Props = IconProps & {
@@ -100,7 +101,7 @@ export const isValidIcon = (source: any) =>
 export const isEqualIcon = (a: any, b: any) =>
   a === b || getIconId(a) === getIconId(b);
 
-const Icon = ({ source, color, size, ...rest }: Props) => {
+const Icon = ({ source, color, size, style, ...rest }: Props) => {
   const direction =
     typeof source === 'object' && source.direction && source.source
       ? source.direction === 'auto'
@@ -140,6 +141,7 @@ const Icon = ({ source, color, size, ...rest }: Props) => {
             tintColor: color,
             resizeMode: 'contain',
           },
+          style,
         ]}
         {...accessibilityProps}
       />
@@ -156,6 +158,7 @@ const Icon = ({ source, color, size, ...rest }: Props) => {
             transform: [{ scaleX: direction === 'rtl' ? -1 : 1 }],
           },
           styles.icon,
+          style,
         ]}
         pointerEvents="none"
         {...accessibilityProps}
