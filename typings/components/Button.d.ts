@@ -6,6 +6,7 @@ import { TouchableRippleProps } from './TouchableRipple';
 export interface ButtonProps extends TouchableRippleProps {
   mode?: 'text' | 'outlined' | 'contained';
   color?: string;
+  textColor?: string;
   dark?: boolean;
   compact?: boolean;
   loading?: boolean;

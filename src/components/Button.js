@@ -29,9 +29,13 @@ type Props = React.ElementConfig<typeof Surface> & {|
    */
   compact?: boolean,
   /**
-   * Custom text color for flat button, or background color for contained button.
+   * Custom background color for button.
    */
   color?: string,
+  /**
+   * Custom text color for button.
+   */
+  textColor?: string,
   /**
    * Whether to show a loading indicator.
    */
@@ -145,6 +149,7 @@ class Button extends React.Component<Props, State> {
       loading,
       icon,
       color: buttonColor,
+      textColor: textCustomColor,
       children,
       uppercase,
       accessibilityLabel,
@@ -202,9 +207,15 @@ class Button extends React.Component<Props, State> {
             : !color(backgroundColor).light();
       }
 
-      textColor = isDark ? white : black;
-    } else if (buttonColor) {
+      if (!textCustomColor) {
+        textColor = isDark ? white : black;
+      } else {
+        textColor = textCustomColor;
+      }
+    } else if (buttonColor && !textCustomColor) {
       textColor = buttonColor;
+    } else if (textCustomColor) {
+      textColor = textCustomColor;
     } else {
       textColor = colors.primary;
     }
