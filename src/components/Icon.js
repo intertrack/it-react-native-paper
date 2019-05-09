@@ -168,10 +168,10 @@ const Icon = ({ source, color, size, ...rest }: Props) => {
   return null;
 };
 
-export default Icon;
-
 const styles = StyleSheet.create({
   icon: {
     backgroundColor: 'transparent',
   },
 });
+
+export default Icon;
