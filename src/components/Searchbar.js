@@ -160,13 +160,15 @@ class Searchbar extends React.Component<Props> {
           style,
         ]}
       >
-        <IconButton
-          borderless
-          rippleColor={rippleColor}
-          onPress={onIconPress}
-          color={iconColor}
-          icon={icon || 'search'}
-        />
+        {icon !== '' &&
+          <IconButton
+            borderless
+            rippleColor={rippleColor}
+            onPress={onIconPress}
+            color={iconColor}
+            icon={icon || 'search'}
+          />
+        }
         <TextInput
           style={[styles.input, { color: textColor, fontFamily }, inputStyle]}
           placeholder={placeholder || ''}

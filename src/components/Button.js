@@ -1,7 +1,7 @@
 /* @flow */
 
 import * as React from 'react';
-import { ActivityIndicator, Animated, View, StyleSheet } from 'react-native';
+import { Animated, View, StyleSheet } from 'react-native';
 import color from 'color';
 import Icon from './Icon';
 import Surface from './Surface';
@@ -11,6 +11,7 @@ import { black, white } from '../styles/colors';
 import { withTheme } from '../core/theming';
 import type { IconSource } from './Icon';
 import type { Theme } from '../types';
+import ActivityIndicator from './ActivityIndicator';
 
 type Props = React.ElementConfig<typeof Surface> & {|
   /**
