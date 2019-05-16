@@ -8,7 +8,7 @@ let MaterialIcons;
 
 try {
   // Optionally require vector-icons
-  MaterialIcons = require('react-native-vector-icons/MaterialIcons').default;
+  MaterialIcons = require('react-native-vector-icons/MaterialCommunityIcons').default;
 } catch (e) {
   if (global.__expo && global.__expo.Icon && global.__expo.Icon.MaterialIcons) {
     // Snack doesn't properly bundle vector icons from subpath
