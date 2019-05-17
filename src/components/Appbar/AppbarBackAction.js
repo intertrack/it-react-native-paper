@@ -62,7 +62,7 @@ class AppbarBackAction extends React.Component<Props> {
                   />
                 </View>
               )
-            : { source: 'arrow-back', direction: 'auto' }
+            : { source: 'arrow-left', direction: 'auto' }
         }
       />
     );
