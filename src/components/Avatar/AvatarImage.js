@@ -11,6 +11,7 @@ type Props = {
    * Image to display for the `Avatar`.
    */
   source: ImageSource,
+  defaultSource?: ImageSource,
   /**
    * Size of the avatar.
    */
@@ -70,6 +71,7 @@ class AvatarImage extends React.Component<Props> {
         <Image
           source={source}
           style={{ width: size, height: size, borderRadius: size / 2 }}
+          defaultSource={defaultSource}
         />
       </View>
     );

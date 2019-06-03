@@ -14,6 +14,7 @@ export declare class Icon extends React.Component<IconProps> {}
 
 export interface ImageProps {
   source: ImageSourcePropType;
+  defaultSource?: ImageSourcePropType;
   size?: number;
   style?: any;
   theme?: ThemeShape;
